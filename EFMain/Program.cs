@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.Entity;
+using EFMain.Migrations;
 
 namespace EFMain
 {
@@ -10,9 +8,11 @@ namespace EFMain
     {
         static void Main(string[] args)
         {
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<SchoolContext, Configuration>());
+
             using (var context = new SchoolContext())
             {
-                var student = new Student {StudentName = "Frank"};
+                var student = new Student { StudentName = "Rain", DOB = DateTime.Today};
 
                 context.Students.Add(student);
 

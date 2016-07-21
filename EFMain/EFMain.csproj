@@ -51,6 +51,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\201607211200390_Initial.cs" />
+    <Compile Include="Migrations\201607211200390_Initial.Designer.cs">
+      <DependentUpon>201607211200390_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607211217032_AddStudentDOB.cs" />
+    <Compile Include="Migrations\201607211217032_AddStudentDOB.Designer.cs">
+      <DependentUpon>201607211217032_AddStudentDOB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SchoolContext.cs" />
@@ -61,6 +70,14 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201607211200390_Initial.resx">
+      <DependentUpon>201607211200390_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607211217032_AddStudentDOB.resx">
+      <DependentUpon>201607211217032_AddStudentDOB.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

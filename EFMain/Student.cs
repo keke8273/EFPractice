@@ -10,5 +10,6 @@ namespace EFMain
     {
         public int StudentID { get; set; }
         public string StudentName { get; set; }
+        public DateTime DOB { get; set; }
     }
 }
