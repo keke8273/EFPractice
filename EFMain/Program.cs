@@ -12,7 +12,11 @@ namespace EFMain
         {
             using (var context = new SchoolContext())
             {
-                context.Database.CreateIfNotExists();
+                var student = new Student {StudentName = "Frank"};
+
+                context.Students.Add(student);
+
+                context.SaveChanges();
             }
         }
     }
