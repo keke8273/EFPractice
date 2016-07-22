@@ -5,10 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SecondContext
+namespace SecondDB
 {
     public class SecondContext : DbContext
     {
+        public SecondContext() : base("ProperDataBaseName")
+        {
+        }
+
         public DbSet<Teacher> Teachers { get; set; }
     }
 }

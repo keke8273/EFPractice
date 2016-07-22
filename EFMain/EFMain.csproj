@@ -60,6 +60,11 @@
       <DependentUpon>201607211217032_AddStudentDOB.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\SecondContext\201607220031381_Initial.cs" />
+    <Compile Include="Migrations\SecondContext\201607220031381_Initial.Designer.cs">
+      <DependentUpon>201607220031381_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\SecondContext\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SchoolContext.cs" />
@@ -78,6 +83,15 @@
     <EmbeddedResource Include="Migrations\201607211217032_AddStudentDOB.resx">
       <DependentUpon>201607211217032_AddStudentDOB.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\SecondContext\201607220031381_Initial.resx">
+      <DependentUpon>201607220031381_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SecondContext\SecondDB.csproj">
+      <Project>{639c4711-a6d9-4004-b86c-3a886907bd8d}</Project>
+      <Name>SecondDB</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
