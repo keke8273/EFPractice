@@ -12,11 +12,7 @@ namespace EFMain
 
             using (var context = new SchoolContext())
             {
-                var student = new Student { StudentName = "Rain", DOB = DateTime.Today};
-
-                context.Students.Add(student);
-
-                context.SaveChanges();
+                context.Database.Initialize(true);
             }
         }
     }
